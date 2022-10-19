@@ -63,7 +63,7 @@ class _CurrencyConverterState extends State<CurrencyConverter> {
   // ignore: unused_element
   Future<String> _doConversion() async {
     var url = Uri.parse(
-        "https://api.frankfurter.app/latest?amount=10&from=$fromCurrency&to=$toCurrency"); /*Se modifica la url ya que venia predeterminada con dos divisas y en cambio se colocan las dos variables que cambian sus divisas cuando son escogidas en el boton desplegable para ser mas dinamico*/
+        "https://api.frankfurter.app/latest?amount=1&from=$fromCurrency&to=$toCurrency"); /*Se modifica la url ya que venia predeterminada con dos divisas y en cambio se colocan las dos variables que cambian sus divisas cuando son escogidas en el boton desplegable para ser mas dinamico*/
     var response =
         await http.get((url), headers: {"Accept": "application/json"});
     var responseBody = json.decode(response.body);
